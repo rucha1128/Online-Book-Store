@@ -1,16 +1,18 @@
 ﻿@model Categories
-<form class="">
+<form method="post">
     <div class="form-group row">
         <h1 class="text-primary">Add category</h1>
         <div class="row">
-                <fieldset>
-                    <label class="form-label mt-4" ></label>
-                    <input class="form-control" id="readOnlyInput" type="text" placeholder="Input here...">
-                </fieldset>
-                <fieldset>
-                    <label class="form-label mt-4"></label>
-                    <input class="form-control" id="readOnlyInput" type="text" placeholder="Input here...">
-                </fieldset>
+            <label class="form-label mt-4" asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" type="text" aria-label="default input example">
+            <label class="form-label mt-4" asp-for="DisplayOrder"></label>
+            <input class="form-control" asp-for="DisplayOrder" type="text" aria-label="default input example">
+        </div>
+        <div class="row pt-4">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-controller="Categories" asp-action="Index" class="btn btn-dark">Back to List</a>
+            </div>
         </div>
     </div>
 </form>

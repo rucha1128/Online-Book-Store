@@ -20,5 +20,12 @@ namespace BookShop.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult AddCategory(Categories cat)
+        {
+            _db.Categories.Add(cat);
+            _db.SaveChanges();
+            return View();
+        }
     }
 }
