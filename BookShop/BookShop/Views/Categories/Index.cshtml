@@ -1,1 +1,28 @@
-﻿<h1>Categories Index</h1>
+﻿@model List<Categories>
+
+<div class="row pt-4">
+    <div class="col-6">
+        <h1 class="text-primary">Categories</h1>
+    </div>
+    <div class="col-6 text-end">
+        <a asp-controller="Categories" asp-action="AddCategory" class="btn btn-dark">
+        <i class="bi bi-plus"></i> Add Category</a>
+    </div>
+    <table class="table table-boarder table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Display Order</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var o in Model)
+            {
+                <tr>
+                    <td>@o.Name</td>
+                    <td>@o.DisplayOrder</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
