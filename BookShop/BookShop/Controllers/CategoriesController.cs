@@ -23,9 +23,26 @@ namespace BookShop.Controllers
         [HttpPost]
         public IActionResult AddCategory(Categories cat)
         {
-            _db.Categories.Add(cat);
-            _db.SaveChanges();
+            if(ModelState.IsValid)
+            {
+                _db.Categories.Add(cat);
+                _db.SaveChanges();
+            }
             return View();
+        }
+        public IActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Edit(Categories cat)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Categories.Update(cat);
+                _db.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
     }
 }

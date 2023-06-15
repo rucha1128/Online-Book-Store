@@ -13,6 +13,7 @@
             <tr>
                 <th>Name</th>
                 <th>Display Order</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +22,11 @@
                 <tr>
                     <td>@o.Name</td>
                     <td>@o.DisplayOrder</td>
+                    <td>
+                        <a asp-controller="Categories" asp-action="Edit" asp-route-id="id" class="btn btn-dark"><i class="bi bi-pencil-square"></i>Edit</a>
+                        <a asp-controller="Categories" asp-action="Delete" class="btn btn-danger"><i class="bi bi-trash"></i>Delete</a>
+                    </td>
+                    
                 </tr>
             }
         </tbody>
