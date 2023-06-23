@@ -1,4 +1,24 @@
 ﻿@page
 @model BookShop_Razor.Pages.Category.DeleteModel
-@{
-}
+
+<form method="post">
+    <input asp-for="categoryList.id" hidden />
+    <div class="form-group row">
+        <h1 class="text-primary">Delete Category</h1>
+        <div class="row">
+
+            <label class="form-label mt-4" asp-for="categoryList.Name"></label>
+            <input class="form-control" asp-for="categoryList.Name" type="text" aria-label="default input example">
+
+            <label class="form-label mt-4" asp-for="categoryList.DisplayOrder"></label>
+            <input class="form-control" asp-for="categoryList.DisplayOrder" type="text" aria-label="default input example">
+
+        </div>
+        <div class="row pt-4">
+            <div class="col">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a asp-page="/Category/Index" class="btn btn-dark">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>

@@ -23,14 +23,14 @@ namespace BookShop_Razor.Pages.Category
             
         }
         public IActionResult OnPost() 
-        { 
-            if (CategoryList == null)
+        {
+            if (ModelState.IsValid)
             {
-                return Page();
+                _db.categories.Update(CategoryList);
+                _db.SaveChanges();
             }
-            _db.categories.Update(CategoryList);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            TempData["success"] = "Category edited successfully !";
+            return RedirectToPage("Index");
         }
     }
 }

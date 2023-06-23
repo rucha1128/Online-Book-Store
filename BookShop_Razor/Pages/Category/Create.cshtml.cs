@@ -26,8 +26,8 @@ namespace BookShop_Razor.Pages.Category
                 _db.categories.Add(Category);
                 _db.SaveChanges();
             }
-             
-            return RedirectToAction("Index");
+            TempData["success"] = "Category created successfully !";
+            return RedirectToPage("Index");
         }
     }
 }
