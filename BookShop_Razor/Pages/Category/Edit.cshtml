@@ -1,0 +1,25 @@
+﻿@page
+@model BookShop_Razor.Pages.Category.EditModel
+
+<form method="post">
+    <div class="form-group row">
+        <h1 class="text-primary">Edit Category</h1>
+        <div class="row">
+
+            <label class="form-label mt-4" asp-for="CategoryList.Name"></label>
+            <input class="form-control" asp-for="CategoryList.Name" type="text" aria-label="default input example">
+            <span asp-validation-for="CategoryList.Name" class="text-danger"></span>
+
+            <label class="form-label mt-4" asp-for="CategoryList.DisplayOrder"></label>
+            <input class="form-control" asp-for="CategoryList.DisplayOrder" type="text" aria-label="default input example">
+            <span asp-validation-for="CategoryList.DisplayOrder" class="text-danger"></span>
+            
+        </div>
+        <div class="row pt-4">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a asp-page="/Category/Index" class="btn btn-dark">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
