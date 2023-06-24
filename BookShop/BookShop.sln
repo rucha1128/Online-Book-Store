@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.33711.374
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop", "BookShop\BookShop.csproj", "{9CF3C5AD-2F14-44D9-925F-7379EA0F10F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop_Razor", "..\BookShop_Razor\BookShop_Razor.csproj", "{8F8F9F30-3CEF-4A37-B189-6C3412A66D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop_Razor", "..\BookShop_Razor\BookShop_Razor.csproj", "{8F8F9F30-3CEF-4A37-B189-6C3412A66D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
