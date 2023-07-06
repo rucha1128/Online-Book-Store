@@ -1,4 +1,5 @@
 ﻿using BookShop.DataAccess;
+using BookShop.DataAccess.Repository.IRepository;
 using BookShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,14 +7,14 @@ namespace BookShop.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoriesController(ApplicationDbContext db)
+        private readonly IUnitOfWork _uow;
+        public CategoriesController(IUnitOfWork uow)
         {
-            _db = db;
+            _uow = uow;
         }
         public IActionResult Index()
         {
-            List<Categories> objCategory = _db.Categories.ToList();
+            List<Categories> objCategory = _uow.Category.GetAll().ToList();
             return View(objCategory);
         }
         public IActionResult AddCategory()
@@ -25,8 +26,8 @@ namespace BookShop.Controllers
         {
             if(ModelState.IsValid)
             {
-                _db.Categories.Add(cat);
-                _db.SaveChanges();
+                _uow.Category.Add(cat);
+                _uow.Save();
             }
             TempData["success"] = "Category Created Successfully !";
             return RedirectToAction("Index");
@@ -37,7 +38,7 @@ namespace BookShop.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _db.Categories.FirstOrDefault(u => u.id == id);
+            var categoryFromDb = _uow.Category.GetFirstOrDefault(u => u.id == id);
             return View(categoryFromDb);
         }
         [HttpPost]
@@ -45,8 +46,8 @@ namespace BookShop.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Update(cat);
-                _db.SaveChanges();
+                _uow.Category.update(cat);
+                _uow.Save();
             }
             TempData["success"] = "Category Updated Successfully !";
             return RedirectToAction("Index");
@@ -57,14 +58,14 @@ namespace BookShop.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _db.Categories.FirstOrDefault(u => u.id == id);
+            var categoryFromDb = _uow.Category.GetFirstOrDefault(u => u.id == id);
             return View(categoryFromDb);
         }
         [HttpPost]
         public IActionResult Delete(Categories cat)
         {
-                _db.Categories.Remove(cat);
-                _db.SaveChanges();
+            _uow.Category.Remove(cat);
+            _uow.Save();
             TempData["success"] = "Category Deleted Successfully !";
             return RedirectToAction("Index");
         }

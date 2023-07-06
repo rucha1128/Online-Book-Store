@@ -16,11 +16,6 @@ namespace BookShop.DataAccess.Repository
             _db = db;
         }
 
-        public void save(Categories category)
-        {
-            _db.SaveChanges();
-        }
-
         public void update(Categories category)
         {
             _db.Categories.Update(category);

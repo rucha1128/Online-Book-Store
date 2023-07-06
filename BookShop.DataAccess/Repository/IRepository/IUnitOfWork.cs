@@ -1,4 +1,4 @@
-﻿using BookShop.Models;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookShop.DataAccess.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Categories>
+    public interface IUnitOfWork
     {
-        void update(Categories category);
+        ICategoryRepository Category { get; }
+        public void Save();
     }
 }
