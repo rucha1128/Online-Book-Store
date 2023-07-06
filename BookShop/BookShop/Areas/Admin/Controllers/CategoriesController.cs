@@ -3,7 +3,7 @@ using BookShop.DataAccess.Repository.IRepository;
 using BookShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop.Controllers
+namespace BookShop.Areas.Admin.Controllers
 {
     public class CategoriesController : Controller
     {
@@ -24,7 +24,7 @@ namespace BookShop.Controllers
         [HttpPost]
         public IActionResult AddCategory(Categories cat)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _uow.Category.Add(cat);
                 _uow.Save();
