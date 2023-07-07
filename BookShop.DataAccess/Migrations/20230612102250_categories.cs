@@ -5,7 +5,7 @@
 namespace BookShop.Migrations
 {
     /// <inheritdoc />
-    public partial class categories : Migration
+    public partial class Categories : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

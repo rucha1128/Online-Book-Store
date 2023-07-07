@@ -11,10 +11,12 @@ namespace BookShop.DataAccess.Repository
     {
         private readonly ApplicationDbContext _context;
         public ICategoryRepository Category { get; private set; }
+        public IProductsRepository Products { get; private set; }
         public UnitOfWork(ApplicationDbContext db)
         {
             _context = db;
             Category = new CategoryRepository(db);
+            Products = new ProductsRepository(db);
         }
         
         public void Save()

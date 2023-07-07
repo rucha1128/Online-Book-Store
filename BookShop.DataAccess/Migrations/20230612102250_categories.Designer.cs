@@ -12,7 +12,7 @@ namespace BookShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230612102250_categories")]
-    partial class categories
+    partial class Categories
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
