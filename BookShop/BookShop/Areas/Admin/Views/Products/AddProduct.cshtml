@@ -1,0 +1,72 @@
+﻿@model Products
+<div class="card shadow mt-4">
+    <div class="card card-header bg-secondary bg-gradient">
+        <div class="row text-center">
+            <h2 class="text-light">Create Category</h2>
+        </div>
+    </div>
+    <div class="card card-body">
+        <form method="post">
+        @*<div asp-validation-summary="ModelOnly"></div>*@
+            <div class="form-floating m-3">
+                <input asp-for="Title" class="form-control" />
+                <label asp-for="Title"></label>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+            
+                <input asp-for="Author" class="form-control" />
+                <label asp-for="Author"></label>
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+
+                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description"></label>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+
+                <input asp-for="ISBN" class="form-control" />
+                <label asp-for="ISBN"></label>
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+
+                <input asp-for="ListPrice" class="form-control" />
+                <label asp-for="ListPrice"></label>
+                <span asp-validation-for="ListPrice" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+            
+                <input asp-for="Price" class="form-control" />
+                <label asp-for="Price"></label>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+
+                <input asp-for="Price50" class="form-control" />
+                <label asp-for="Price50"></label>
+                <span asp-validation-for="Price50" class="text-danger"></span>
+            </div>
+            <div class="form-floating m-3">
+            
+                <input asp-for="Price100" class="form-control" />
+                <label asp-for="Price100"></label>
+                <span asp-validation-for="Price100" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-floating row m-1">
+                <div class=" col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">Create</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-page="/categories/index" class="btn btn-secondary border  form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

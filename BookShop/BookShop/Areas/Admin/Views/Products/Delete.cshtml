@@ -1,0 +1,64 @@
+﻿@model Products
+<div class="card shadow mt-4">
+    <div class="card card-header bg-secondary bg-gradient">
+        <div class="row text-center">
+            <h1 class="text-light">Delete Category</h1>
+        </div>
+    </div>
+    <dic class="card card-body">
+        <form method="post">
+            <input asp-for="id" hidden />
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Title">
+                <label asp-for="Title"></label>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Author">
+                <label asp-for="Author"></label>
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Description">
+                <label asp-for="Description"></label>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="ISBN">
+                <label asp-for="ISBN"></label>
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="ListPrice">
+                <label asp-for="ListPrice"></label>
+                <span asp-validation-for="ListPrice" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Price">
+                <label asp-for="Price"></label>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Price50">
+                <label asp-for="Price50"></label>
+                <span asp-validation-for="Price50" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-3">
+                <input class="form-control" asp-for="Price100">
+                <label asp-for="Price100"></label>
+                <span asp-validation-for="Price100" class="text-danger"></span>
+            </div>
+            <div class="form-floating row m-1">
+                <div class=" col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary form-control">Delete</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-page="/categories/index" class="btn btn-secondary border  form-control">
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </form>
+
+    </dic>
+</div>
