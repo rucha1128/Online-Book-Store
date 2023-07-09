@@ -3483,11 +3483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Online book shop\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj",
       "projectName": "BookShop.DataAccess",
-      "projectPath": "D:\\Online book shop\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Rucha\\.nuget\\packages\\",
-      "outputPath": "D:\\Online book shop\\Online-Book-Store\\BookShop.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rucha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3504,8 +3504,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Online book shop\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj": {
-              "projectPath": "D:\\Online book shop\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj"
+            "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj": {
+              "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj"
             }
           }
         }
