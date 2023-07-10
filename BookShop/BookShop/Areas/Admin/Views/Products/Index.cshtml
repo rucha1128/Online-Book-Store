@@ -16,6 +16,7 @@
                 <th>Author</th>
                 <th>ISBM</th>
                 <th>Price</th>
+                <th>Category</th>
                 <th></th>
             </tr>
         </thead>
@@ -27,6 +28,7 @@
                     <td>@o.Author</td>
                     <td>@o.ISBN</td>
                     <td>@o.Price</td>
+                    <td>@o.CategoryId</td>
                     <td>
                         <a asp-controller="Products" asp-action="Edit" asp-route-id="@o.id" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>
                         <a asp-controller="Products" asp-action="Delete" asp-route-id="@o.id" class="btn btn-danger"><i class="bi bi-trash"></i>Delete</a>

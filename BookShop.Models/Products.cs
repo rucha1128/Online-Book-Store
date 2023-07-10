@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookShop.Models
 {
@@ -11,7 +12,7 @@ namespace BookShop.Models
         
         public string Author { get; set; }
         public string Description { get; set; }
-        
+        [Required]
         public string ISBN { get; set; }
         
         [Display(Name = "List Price")]
@@ -28,6 +29,8 @@ namespace BookShop.Models
         [Range(0, 1000)]
         [Display(Name = "Price for 100+")]
         public int Price100 { get; set; }
-
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
+        public Categories Category { get; set; }
     }
 }

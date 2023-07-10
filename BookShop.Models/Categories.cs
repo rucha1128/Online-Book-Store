@@ -5,6 +5,7 @@ namespace BookShop.Models
 {
     public class Categories
     {
+        [Key]
         public int id { get; set; }
         [Required]
         [MaxLength(30)]
