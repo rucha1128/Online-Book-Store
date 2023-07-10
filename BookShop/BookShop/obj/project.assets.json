@@ -1132,6 +1132,41 @@
             "rid": "win"
           }
         }
+      },
+      "BookShop.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BookShop.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.7"
+        },
+        "compile": {
+          "bin/placeholder/BookShop.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookShop.DataAccess.dll": {}
+        }
+      },
+      "BookShop.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BookShop.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookShop.Models.dll": {}
+        }
+      },
+      "BookShop.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BookShop.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookShop.Utility.dll": {}
+        }
       }
     }
   },
@@ -3452,29 +3487,47 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BookShop.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../../BookShop.DataAccess/BookShop.DataAccess.csproj",
+      "msbuildProject": "../../BookShop.DataAccess/BookShop.DataAccess.csproj"
+    },
+    "BookShop.Models/1.0.0": {
+      "type": "project",
+      "path": "../../BookShop.Models/BookShop.Models.csproj",
+      "msbuildProject": "../../BookShop.Models/BookShop.Models.csproj"
+    },
+    "BookShop.Utility/1.0.0": {
+      "type": "project",
+      "path": "../../BookShop.Utility/BookShop.Utility.csproj",
+      "msbuildProject": "../../BookShop.Utility/BookShop.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BookShop.DataAccess >= 1.0.0",
+      "BookShop.Models >= 1.0.0",
+      "BookShop.Utility >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ruchamu\\.nuget\\packages\\": {}
+    "C:\\Users\\Rucha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ruchamu\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\BookShop.csproj",
+      "projectUniqueName": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\BookShop.csproj",
       "projectName": "BookShop",
-      "projectPath": "C:\\Users\\ruchamu\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\BookShop.csproj",
-      "packagesPath": "C:\\Users\\ruchamu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ruchamu\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\obj\\",
+      "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\BookShop.csproj",
+      "packagesPath": "C:\\Users\\Rucha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop\\BookShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ruchamu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rucha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3488,7 +3541,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.DataAccess\\BookShop.DataAccess.csproj"
+            },
+            "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj": {
+              "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj"
+            },
+            "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Utility\\BookShop.Utility.csproj": {
+              "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Utility\\BookShop.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

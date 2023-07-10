@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Online book shop\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj",
       "projectName": "BookShop.Models",
-      "projectPath": "D:\\Online book shop\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj",
+      "projectPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\BookShop.Models.csproj",
       "packagesPath": "C:\\Users\\Rucha\\.nuget\\packages\\",
-      "outputPath": "D:\\Online book shop\\Online-Book-Store\\BookShop.Models\\obj\\",
+      "outputPath": "C:\\Users\\Rucha\\source\\repos\\rucha1128\\Online-Book-Store\\BookShop.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rucha\\AppData\\Roaming\\NuGet\\NuGet.Config",
